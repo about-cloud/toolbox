@@ -1,5 +1,4 @@
 # Microsoft Graph
-======================
 These functions provide functionality to connect with Microsoft Graph using an Enterprise Application in Azure AD.
 
 * Get-AccessToken.ps1 will authenticate with Microsoft Graph using a Client ID, Client Secret and Tenant ID from an Enterprise Application and returns an access token.

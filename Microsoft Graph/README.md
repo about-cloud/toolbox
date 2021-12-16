@@ -12,6 +12,15 @@ New-AccessToken.ps1
 4. Now execute the function: ```New-AccessToken -ClientID 'YourClientIDHere' -ClientSecret 'SuperSecretHere' -Tenant 'TenantIDHere'```
 5. This will return an access token that can be used. This token is valid for 15 minutes.
 
+New-DelegatedAccessToken.ps1
+-------------------------
+1. Create an Enterprise Application in Azure AD and give the required Delegated permissions.
+2. Make sure you have an Client ID and Tenant ID retrieved from that Enterprise Application.
+3. It is required to enable the native redirect URI for Mobile and desktop applications and set Allow public client flows to Yes.
+4. Load New-DelegatedAccessToken.ps1 inside your script or console.
+5. Now execute the function: ```New-DelegatedAccessToken -ClientID 'YourClientIDHere' -ClientSecret -Tenant 'TenantIDHere'```
+6. This will require you to login with user credentials. After authenticating sucessfully, an access token is returned. This token is valid for 15 minutes.
+
 Invoke-MicrosoftGraph.ps1
 -------------------------
 1. Run New-AccessToken.ps1 first to retrieve an access token.
